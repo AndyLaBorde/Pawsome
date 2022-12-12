@@ -1,13 +1,16 @@
-const {post} =require ("../models")
+const { Post } = require("../models");
 
 const postData = [
-{
+  {
     user_id: 1,
-    photo: 2,
-    description: 3,
+    photo:
+      "https://drive.google.com/file/d/1uZN00KZvZ92w6_BbN5XHBoOyCaWEUYex/preview",
+    description: "Im a red Cat",
     likes: 4,
+    //comment Id could be removed
     comments_id: 5,
-}
-]
+  },
+];
 
-const seedUserData = () => user.bulkCreate(postData)
+const seedPostData = () => Post.bulkCreate(postData);
+module.exports = seedPostData;
