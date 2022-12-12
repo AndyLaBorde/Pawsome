@@ -10,6 +10,8 @@ const userData = [
     password: "Supergoodpassword",
 
     pet: "Cat",
+
+    profile_picture: "./profile_pictures/Cat_red.jpg",
   },
 ];
 

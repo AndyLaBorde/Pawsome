@@ -6,5 +6,5 @@ const followingData = [
   },
 ];
 
-const followerSeedData = () => following.bulkCreate(followingData);
-module.exports = followerSeedData;
+const followingSeedData = () => following.bulkCreate(followingData);
+module.exports = followingSeedData;
