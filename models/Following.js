@@ -26,3 +26,5 @@ Following.init(
         modelName: 'following'
     }
 );
+
+module.exports = Following;
