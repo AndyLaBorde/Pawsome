@@ -13,6 +13,18 @@ const userData = [
 
     profile_picture: "./profile_pictures/Cat_red.jpg",
   },
+  {
+    //user id = 2
+    username: "Chris P Bacon",
+
+    email: "Chris-P-Bacon.0@gmail.com",
+
+    password: "BaconIsGood",
+
+    pet: "Pig Dog",
+
+    profile_picture: "./profile_pictures/Jack_russel_pink.jpg",
+  },
 ];
 
 const seedUserData = () => User.bulkCreate(userData);

@@ -1,4 +1,4 @@
-const { following } = require("..models");
+const { Following } = require("../models");
 
 const followingData = [
   {
@@ -6,5 +6,5 @@ const followingData = [
   },
 ];
 
-const followingSeedData = () => following.bulkCreate(followingData);
+const followingSeedData = () => Following.bulkCreate(followingData);
 module.exports = followingSeedData;

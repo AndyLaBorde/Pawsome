@@ -1,4 +1,4 @@
-const { follower } = require("../models");
+const { Follower } = require("../models");
 
 const followerData = [
   {
@@ -6,5 +6,5 @@ const followerData = [
   },
 ];
 
-const followerSeedData = () => follower.bulkCreate(followerData);
+const followerSeedData = () => Follower.bulkCreate(followerData);
 module.exports = followerSeedData;
