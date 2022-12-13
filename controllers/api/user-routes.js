@@ -1,13 +1,20 @@
 const router = require("express").Router();
-const { User } = require("../../models");
-
+const { User, Following, Post } = require("../../models");
+console.log(Post);
 //http://localhost:3001/api/users
 //get all users
 router.get("/", async (req, res) => {
   try {
-    let data = await User.findAll();
+    let data = await User.findAll({
+      include: [
+        {
+          model: Post,
+        },
+      ],
+    });
     res.status(200).json(data);
   } catch (error) {
+    console.log(error);
     res.status(500).json(error);
   }
 });
@@ -16,7 +23,7 @@ router.get("/", async (req, res) => {
 //http://localhost:3001/api/users/id
 router.get("/:id", async (req, res) => {
   try {
-    data = await User.findByPk(req.params.id);
+    data = await User.findByPk(req.params.id, {});
     res.status(200).json(data);
   } catch (error) {
     res.status(500).json(error);
