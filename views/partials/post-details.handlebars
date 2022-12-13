@@ -1,9 +1,8 @@
-
-
+{{!-- post cards --}}
 <section class = "card"> 
-        <a href="/posts/{{id}}"><img src="" alt="Pawsome Logo"></a>
-        <iframe src="{{post.[0].photo}}" width="640" height="480" allow="autoplay" alt="Friendly pet picture!"></iframe>
-        <p>{{posts.[0].description}}</p>
+        <a href="/posts/{{posts.[0].id}}"><img src="" alt="Profile pic"></a>
+        {{!-- <iframe src="{{post.photo}}" width="640" height="480" allow="autoplay" alt="Friendly pet picture!"></iframe> --}}
+        <p>{{post.[0].description}}</p>
         <img src="" alt="likes logo">
         <img src="" alt="comments logo">
         <section class="card comment-box">

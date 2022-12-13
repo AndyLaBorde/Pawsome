@@ -1,4 +1,8 @@
-
 {{#each posts as |post|}}
-{{> post-details}}
+    <iframe src="{{post.photo}}"></iframe>
+    {{post.description}}
 {{/each}}
+
+{{!-- posts.map((post)=> {
+    <iframe src="{{post.photo}}"></iframe>
+}) --}}
