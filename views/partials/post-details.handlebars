@@ -1,10 +1,15 @@
-<section class = "card"> 
-    
-    <a href="/posts/{{id}}">
-        <a href="/posts/{{id}}"></a>
-        <iframe src="{{posts.[0].photo}}" width="640" height="480" allow="autoplay"></iframe>
-        <img src="/images/{{posts.[0].photo}}" alt="{{posts.[0].description}}">
-        <p>{{posts.[0].description}}</p>
-    </a>
 
-    </section>
+
+<section class = "card"> 
+        <a href="/posts/{{id}}"><img src="" alt="Pawsome Logo"></a>
+        <iframe src="{{post.[0].photo}}" width="640" height="480" allow="autoplay" alt="Friendly pet picture!"></iframe>
+        <p>{{posts.[0].description}}</p>
+        <img src="" alt="likes logo">
+        <img src="" alt="comments logo">
+        <section class="card comment-box">
+            {{!-- for each comment print a comment --}}
+            {{!-- {{#each post.[0].comment as |comment|}}
+                {{> comment-details}}
+            {{/each}} --}}
+        </section>
+</section>
