@@ -8,3 +8,6 @@ const followingData = [
 
 const followingSeedData = () => Following.bulkCreate(followingData);
 module.exports = followingSeedData;
+
+const seedFollowingData = () => Following.bulkCreate(followingData)
+module.exports = seedFollowingData;

@@ -1,18 +1,43 @@
 const router = require("express").Router();
-const { Gallery, Painting } = require("../models");
+const { User, Comment, Post } = require("../models");
 // TODO: Import the custom middleware
 
 // GET all posts for homepage
-// router.get("/", async (req, res) => {
-//   try {
-//     const dbGalleryData = await Gallery.findAll({
-//       include: [
-//         {
-//           model: Painting,
-//           attributes: ["filename", "description"],
-//         },
-//       ],
-//     });
+router.get("/", async (req, res) => {
+    try {
+        const postData = await Post.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ["username"]
+                },
+                { model: Comment,
+                attributes: ["text"],
+            },
+            ],
+        });
+        res.status(200).json(postData);
+    } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+    }
+});
+
+// get single post
+
+// create new popst
+
+//update post
+
+// delete post
+
+
+
+
+
+// check if is follower 
+
+//
 
 //     const galleries = dbGalleryData.map((gallery) =>
 //       gallery.get({ plain: true })

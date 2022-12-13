@@ -28,3 +28,7 @@ const seedTables = async () => {
 };
 
 seedTables();
+
+const seedAll = async () => {
+    await sequelize
+}

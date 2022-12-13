@@ -6,52 +6,52 @@ const Following = require("./Following");
 
 //Following
 User.hasMany(Following, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
 });
 
 Following.belongsTo(User, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
 });
 
 //Followers
 User.hasMany(Follower, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
 });
 
 Follower.belongsTo(User, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
 });
 
 //Posts
 User.hasMany(Post, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
 });
 
 Post.belongsTo(User, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
 });
 
 //comments
 Post.hasMany(Comment, {
-  foreignKey: "post_id",
-  onDelete: "CASCADE",
+    foreignKey: "post_id",
+    onDelete: "CASCADE",
 });
 
 Comment.belongsTo(Post, {
-  foreignKey: "post_id",
-  onDelete: "CASCADE",
+    foreignKey: "post_id",
+    onDelete: "CASCADE",
 });
 
 module.exports = {
-  User,
-  Post,
-  Comment,
-  Follower,
-  Following,
+    User,
+    Post,
+    Comment,
+    Follower,
+    Following,
 };
