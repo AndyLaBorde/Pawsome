@@ -23,6 +23,18 @@ router.get("/", async (req, res) => {
     }
 });
 
+// get single post
+
+// create new popst
+
+//update post
+
+// delete post
+
+
+
+
+
 // check if is follower 
 
 //
