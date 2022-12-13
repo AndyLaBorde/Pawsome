@@ -1,10 +1,14 @@
+{{!-- post cards --}}
 <section class = "card"> 
-    
-    <a href="/posts/{{id}}">
-        <a href="/posts/{{id}}"></a>
-        <iframe src="{{posts.[0].photo}}" width="640" height="480" allow="autoplay"></iframe>
-        <img src="/images/{{posts.[0].photo}}" alt="{{posts.[0].description}}">
-        <p>{{posts.[0].description}}</p>
-    </a>
-
-    </section>
+        <a href="/posts/{{posts.[0].id}}"><img src="" alt="Profile pic"></a>
+        {{!-- <iframe src="{{post.photo}}" width="640" height="480" allow="autoplay" alt="Friendly pet picture!"></iframe> --}}
+        <p>{{post.[0].description}}</p>
+        <img src="" alt="likes logo">
+        <img src="" alt="comments logo">
+        <section class="card comment-box">
+            {{!-- for each comment print a comment --}}
+            {{!-- {{#each post.[0].comment as |comment|}}
+                {{> comment-details}}
+            {{/each}} --}}
+        </section>
+</section>
