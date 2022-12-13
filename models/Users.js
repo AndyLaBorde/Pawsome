@@ -44,7 +44,8 @@ User.init(
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        newUserData.email = newUserData.toLowerCase();
+        console.log(newUserData.email);
+        newUserData.email = newUserData.email.toLowerCase();
       },
       beforeBulkCreate: async (newUserData) => {
         //password hashing for each user in the array of new user Data
