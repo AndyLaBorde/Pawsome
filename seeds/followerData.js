@@ -1,4 +1,4 @@
-const {follower} = require ("../models")
+const {Follower} = require ("../models")
 
 const followerData = [
 {
@@ -9,4 +9,6 @@ const followerData = [
 ]
 
 
-const seedUserData = () => user.bulkCreate(followerData)
+const seedFollowerData = () => Follower.bulkCreate(followerData)
+
+module.exports = seedFollowerData;

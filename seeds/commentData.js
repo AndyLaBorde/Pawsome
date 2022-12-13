@@ -1,6 +1,6 @@
-const {comments} = require ("..models")
+const {Comment} = require ("..models")
 
-const commentsData = [
+const commentData = [
 {
     post_id: 1,
     user_name: 2,
@@ -8,4 +8,5 @@ const commentsData = [
 }
 ]
 
-const seedUserData = () => user.bulkCreate(comentsData)
+const seedCommentData = () => Comment.bulkCreate(commentData)
+module.exports = seedCommentData;

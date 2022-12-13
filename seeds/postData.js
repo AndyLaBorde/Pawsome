@@ -1,4 +1,4 @@
-const {post} =require ("../models")
+const {Post} =require ("../models")
 
 const postData = [
 {
@@ -10,4 +10,6 @@ const postData = [
 }
 ]
 
-const seedUserData = () => user.bulkCreate(postData)
+const seedPostData = () => Post.bulkCreate(postData);
+
+module.exports = seedPostData;
