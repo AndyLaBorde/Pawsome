@@ -11,7 +11,7 @@ const userData = [
 
     pet: "Cat",
 
-    profile_picture: "./profile_pictures/Cat_red.jpg",
+    profile_picture: "../images/profile_pictures/Cat_red.jpg",
   },
   {
     //user id = 2
@@ -23,7 +23,7 @@ const userData = [
 
     pet: "Pig Dog",
 
-    profile_picture: "./profile_pictures/Jack_russel_pink.jpg",
+    profile_picture: "../images/profile_pictures/Jack_russel_pink.jpg",
   },
 ];
 
