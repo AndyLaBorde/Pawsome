@@ -1,8 +1,8 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const password = document.querySelector("#password").value.trim();
 
   if (email && password) {
     const response = await fetch("api/users/login", {
@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
     });
     console.log(response);
     if (response.ok) {
-      console.log("logged in")
+      console.log("logged in");
       document.location.replace("/api/posts");
     } else {
       alert("Failed to log in.");
