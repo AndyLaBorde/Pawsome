@@ -22,7 +22,8 @@
                         </ul>
                     </div>
             </nav>
-        {{#else}}
+        
+        {{else}}
             <nav class="navbar bg-light sticky-top">
                 <img src="" alt="Pawsome logo">
                 <div class="dropdown">
@@ -35,7 +36,7 @@
                     </ul>
                 </div>
             </nav>
-        {{/else}}
+        
         {{/if}}
     </header>
     {{#if loggedIn}}
@@ -45,7 +46,8 @@
             </div>
         </main>
         <script src="../../public/js/logout.js"></script>
-    {{#else}}
+    
+    {{else}}
         <section class="d-flex vh-100">
         <div class="row align-items-center">
             <div id="login" class="login-card m-2 p-2">
@@ -65,7 +67,6 @@
                 </form>
             </div>
         </section>
-    {{/else}}
     {{/if}}
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
