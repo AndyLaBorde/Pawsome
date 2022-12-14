@@ -134,5 +134,10 @@ form input{
     height: 100vh
 }
 
+.custom-link {
+    text-decoration: none;
+    color: black;
+    
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');

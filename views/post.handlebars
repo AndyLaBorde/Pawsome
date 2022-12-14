@@ -4,7 +4,7 @@
         <a href="/api/users/{{post.user_id}}"><img src="{{post.user.profile_picture}}" alt="Profile pic"></a>
         <p>{{post.user.username}}</p>
     </div>
-    <div class="card=body">
+    <div class="card-body">
         <iframe src="{{post.photo}}"></iframe>
         <p>{{post.description}}</p>
         <img src="../images/dog-bone-logo.png" alt="likes logo">
@@ -14,7 +14,7 @@
         <h5>Comments</h5>
         {{#each post.comments as |comment|}}
             <div class="custom-comment">
-                <p> <img class="custom-comment-pic rounded-circle" src="{{comment.user.profile_picture}}">  {{comment.user.username}}</p>
+                <p>{{comment.[0].user}}</p>
                 <p>{{comment.text}}</p>
             </div> 
         {{/each}}
