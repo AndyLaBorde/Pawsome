@@ -1,23 +1,91 @@
-<div class="login-card">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="username-signup">Username:</label>
-        <input class="form-input" type="text" id="username-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<script src="./js/login.js"></script>
+<head>
+  <link rel="stylesheet" href="./style/login">
+</head>
+<body>
+    <div class="gridContainer">
+      <main class="halfSection fullHeight">
+        <!-- main form section  -->
+        <section class="halfSection p-3">
+          <!-- top buttons container -->
+          <a href="">
+            <img src=".images/Logo.png" alt="" class="logo" />
+          </a>
+          <header class="d-flex justify-content-around align-items-center">
+            <div class="">
+              <p class="">Login</p>
+            </div>
+            <div class="headerSelect">
+              <p class="">Sign Up</p>
+            </div>
+          </header>
+          <!--title section-->
+          <div class="leftMargin mainContainer">
+            <div class="textContainer">
+              <h1>Woof Woof!</h1>
+              <h2>Sign Up!</h2>
+            </div>
+            <div>
+              <!--form-->
+              <form action="">
+                <div>
+                  <input
+                    data-isClicked="false"
+                    class="whiteText"
+                    type="text"
+                    name=""
+                    id="username"
+                    placeholder="Username"
+                    autocomplete="off"
+                  />
+                  <input
+                    data-isClicked="false"
+                    class="whiteText"
+                    type="text"
+                    name=""
+                    id="email"
+                    placeholder="Email"
+                    autocomplete="off"
+                  />
+                  <input
+                    data-isClicked="false"
+                    class="whiteText"
+                    type="text"
+                    name=""
+                    id="password"
+                    placeholder="Password"
+                    autocomplete="off"
+                  />
+                </div>
+              </form>
+              <!--checkbox and description-->
+              <div></div>
+              <!--Submit-->
+              <button class="submitButton">Submit!</button>
+            </div>
+            <footer></footer>
+          </div>
+        </section>
+        <a href="https://icons8.com/"
+          ><p class="lightTextColor fixed-bottom m-1">Icons by Icons8</p></a
+        >
+      </main>
+      <aside class="halfSection">
+        <div class="main-image"></div>
+      </aside>
+    </div>
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- js script  -->
+    <script src="./js/signIn-animation.js"></script>
+    <!-- bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
