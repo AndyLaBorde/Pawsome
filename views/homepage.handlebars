@@ -1,8 +1,17 @@
-{{#each posts as |post|}}
-    <iframe src="{{post.photo}}"></iframe>
-    {{post.description}}
-{{/each}}
-
-{{!-- posts.map((post)=> {
-    <iframe src="{{post.photo}}"></iframe>
-}) --}}
+{{!-- {{#each posts as |post|}}
+<section class="card">
+    <iframe src="{{post.photo}}" <a href="/posts/{{post.id}}"><img src="" alt="Profile pic"></a>
+        <p>{{post.description}}</p>
+        <img src="" alt="likes logo">
+        <img src="" alt="comments logo">
+        <section class="card comment-box">
+            {{!-- for each comment print a comment --}}
+            {{#each post.comment_id as |comment|}}
+            {{#each comment.user_id as |user|}}
+            <img src="{{user.profile_pic}}">
+            <p>{{comment.text}}</p>
+            {{/each}}
+            {{/each}}
+        </section>
+</section>
+{{/each}} --}}
