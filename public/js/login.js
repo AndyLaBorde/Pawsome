@@ -13,7 +13,7 @@ const loginFormHandler = async (event) => {
     console.log(response);
     if (response.ok) {
       console.log("logged in");
-      document.location.replace("/api/posts");
+      document.location.replace("/");
     } else {
       alert("Failed to log in.");
     }

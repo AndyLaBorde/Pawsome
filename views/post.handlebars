@@ -1,19 +1,20 @@
 {{#each posts as |post|}}
-<section class="card">
-    <header>
-    <a href="/api/users/{{post.user_id}}"><img src="{{post.user.profile_picture}}" alt="Profile pic"></a>
-    <p>{{post.user.username}}</p>
-    </header>
-    <iframe src="{{post.photo}}"></iframe>
-
-    <p>{{post.description}}</p>
-    <img src="../images/dog-bone-logo.png" alt="likes logo">
-    <img src="../images/comment-icon.png" alt="comments logo">
-    <section class="card comment-box">
+<section class="card col-3 m-2 p-3">
+    <div class="card-header">
+        <a href="/api/users/{{post.user_id}}"><img src="{{post.user.profile_picture}}" alt="Profile pic"></a>
+        <p>{{post.user.username}}</p>
+    </div>
+    <div class="card-body">
+        <iframe src="{{post.photo}}"></iframe>
+        <p>{{post.description}}</p>
+        <img src="../images/dog-bone-logo.png" alt="likes logo">
+        <img src="../images/comment-icon.png" alt="comments logo">
+    </div>
+    <div class="card-footer comment-box">
         <h5>Comments</h5>
         {{#each post.comments as |comment|}}
-        <div class="comment">
-                <p> <img class="rounded" src="{{comment.user.profile_picture}}">  {{comment.user.username}}</p>
+            <div class="custom-comment">
+                <p>{{comment.[0].user}}</p>
                 <p>{{comment.text}}</p>
             </div> 
         {{/each}}
