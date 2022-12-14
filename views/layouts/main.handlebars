@@ -25,15 +25,9 @@
         <link rel="stylesheet" href="/style/login.css" />
     </head>
     <body>
-        <div class=" gridContainer">
+        <div class="gridContainer">
+        <main class="halfSection fullHeight">
             <!-- main form section  -->
-            {{#if loggedIn}}
-                <div id="posts">
-                    {{body}}
-                </div>
-
-            {{else}}
-        <main class=" halfSection fullHeight">
             <section class="halfSection p-3">
             <!-- top buttons container -->
             <a href="">
@@ -53,27 +47,47 @@
                 <h1>Woof Woof!</h1>
                 <h2>Welcome!</h2>
                 </div>
-                <section class="d-flex vh-100">
-                <div class="row align-items-center">
-                    <div id="login" class="login-card m-2 p-2">
-                        <h2 class="page-title">Login</h2>
-                        <form class="form login-form">
-                            <div class="form-group align-items-center p-3">
-                                <label for="email-login">Email:</label>
-                                <input class="form-input" type="text" id="email-login" />
-                            </div>
-                            <div class="form-group p-2">
-                                <label for="password-login">Password:</label>
-                                <input class="form-input" type="password" id="password-login" />
-                            </div>
-                            <div class="form-group">
-                                <button id="login" class="btn btn-primary" type="submit">login</button>
-                            </div>
-                        </form>
+                <div>
+                <!--form-->
+                <form action="">
+                    <div>
+                    <input
+                        data-isClicked="false"
+                        class="whiteText"
+                        type="text"
+                        name=""
+                        id="email"
+                        placeholder="Email"
+                        autocomplete="off"
+                    />
+                    <input
+                        data-isClicked="false"
+                        class="whiteText"
+                        type="text"
+                        name=""
+                        id="password"
+                        placeholder="Password"
+                        autocomplete="off"
+                    />
                     </div>
-                </section>
-            </main>
-            {{/if}}
+                </form>
+                <!--checkbox and description-->
+                <div></div>
+                <!--Submit-->
+                <button class="submitButton">Submit!</button>
+                </div>
+                <footer></footer>
+            </div>
+            </section>
+            <a href="https://icons8.com/"
+            ><p class="lightTextColor fixed-bottom m-1">Icons by Icons8</p></a
+            >
+        </main>
+        <aside class="halfSection">
+            <div class="main-image"></div>
+        </aside>
+        </div>
+        <!-- jquery -->
         <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
@@ -89,7 +103,5 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"
         ></script>
-        <script src="../../public/js/logout.js"></script>
-        
     </body>
 </html>
