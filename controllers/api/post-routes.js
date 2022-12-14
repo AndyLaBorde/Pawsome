@@ -5,20 +5,30 @@ const { User, Post, Comment } = require("../../models");
 //https://localhost:3001/api/posts/
 //get all
 router.get("/", async (req, res) => {
-  try {
-    let data = await Post.findAll({
-      include: [
-        { model: User },
-        {
-          model: Comment,
-        },
-      ],
-    });
-    res.status(200).json(data);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json("SomeThing went wrong");
-  }
+    try {
+        const postData = await Post.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ["username"]
+                },
+                { model: Comment,
+                attributes: ["text"],
+            },
+            ],
+        });
+        const posts = postData.map((post) =>
+        post.get({ plain: true})
+        );
+        res.render('post', {
+            posts, 
+            loggedIn: req.session.loggedIn 
+        });
+        // res.status(200).json(postData);
+    } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+    }
 });
 
 //https://localhost:3001/api/posts/:id

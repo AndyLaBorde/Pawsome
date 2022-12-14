@@ -39,7 +39,7 @@ router.get("/:id", async (req, res) => {
 
 //Create user
 //http://localhost:3001/api/users/
-router.post("/", async (req, res) => {
+router.post("/signup", async (req, res) => {
   try {
     data = await User.create({
       username: req.body.username,

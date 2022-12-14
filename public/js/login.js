@@ -5,17 +5,19 @@ const loginFormHandler = async (event) => {
   const password = document.querySelector("#password-login").value.trim();
 
   if (email && password) {
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("api/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
-
+    console.log(response);
     if (response.ok) {
-      document.location.replace("/");
+      console.log("logged in")
+      document.location.replace("/api/posts");
     } else {
       alert("Failed to log in.");
     }
   }
 };
 
+document.querySelector("#login").addEventListener("click", loginFormHandler);
