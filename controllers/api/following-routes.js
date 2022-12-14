@@ -7,7 +7,7 @@ router.get("/:following", async (req, res) => {
   try {
     const followingData = await Following.findAll({
       where: {
-        following_id: req.params.following,
+        follower_id: req.params.following,
       },
       include: [{ model: User }],
     });
@@ -23,7 +23,7 @@ router.get("/:following", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const followingData = await Following.create({
-      following_id: req.body.user_id,
+      follower_id: req.body.user_id,
       user_id: req.body.user_id,
     });
     res.status(200).json(followingData);
@@ -39,7 +39,7 @@ router.delete("/", async (req, res) => {
   try {
     const followingData = await Following.destroy({
       where: {
-        following_id: req.body.user_id,
+        follower_id: req.body.user_id,
         user_id: req.body.user_id,
       },
     });

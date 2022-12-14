@@ -11,7 +11,7 @@ const followingRoutes = require("./following-routes");
 router.use("/users", userRoutes);
 router.use("/posts", postRoutes);
 router.use("/following", followingRoutes);
-// router.use("/followers", followerRoutes);
+router.use("/followers", followerRoutes);
 // router.use("/login", loginRoutes);
 // router.use("/signup", signupRoutes);
 
