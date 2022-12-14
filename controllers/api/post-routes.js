@@ -17,14 +17,14 @@ router.get("/", async (req, res) => {
             },
             ],
         });
-        const posts = postData.map((post) =>
-        post.get({ plain: true})
-        );
-        res.render('homepage', {
-            posts, 
-            loggedIn: req.session.loggedIn 
-        });
-        // res.status(200).json(postData);
+        // const posts = postData.map((post) =>
+        // post.get({ plain: true})
+        // );
+        // res.render('homepage', {
+        //     posts, 
+        //     loggedIn: req.session.loggedIn 
+        // });
+        res.status(200).json(postData);
     } catch (err) {
     console.log(err);
     res.status(500).json(err);

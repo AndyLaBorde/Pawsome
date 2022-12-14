@@ -1,9 +1,10 @@
 {{#each posts as |post|}}
 <section class="card">
-    <iframe src="{{post.photo}}" <a href="/posts/{{post.id}}"><img src="" alt="Profile pic"></a>
+    <a href="/posts/{{post.id}}"><img src="" alt="Profile pic"></a>
+    <iframe src="{{post.photo}}"></iframe>
         <p>{{post.description}}</p>
-        <img src="" alt="likes logo">
-        <img src="" alt="comments logo">
+        <img src="https://icons8.com/icon/isuU3TxRtY1f/bone" alt="bone logo">
+        <img src="https://icons8.com/icon/11167/comments" alt="comment logo">
         <section class="card comment-box">
             {{!-- for each comment print a comment --}}
             {{#each post.comment_id as |comment|}}
