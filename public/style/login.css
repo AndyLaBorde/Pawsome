@@ -1,0 +1,138 @@
+:root {
+    /* darkmode */
+    --main-bg-color: #ffffff;
+    --light-bg-color: #e5e5e5;
+    --light-accent-color: #8e94c0;
+    --accent-color: #ff0000;
+    --font-color: rgb(0, 0, 0);
+    --bold-font: 'Roboto', sans-serif;
+
+    
+}
+/* dark mode */
+/* --main-bg-color: #2d3250;
+    --light-bg-color: #484d6c;
+    --light-accent-color: #8e94c0;
+    --accent-color: #f1b765;
+    --font-color: white; */
+
+::placeholder{
+    color: black
+}
+
+p {
+    font-family: var(--bold-font);
+}
+
+h1 {
+    font-family: var(--bold-font);
+    letter-spacing: .05rem;
+    color: var(--accent-color);
+}
+
+h2 {
+    color: var(--accent-color);
+    font-family: var(--bold-font);
+    text-align: right;
+    padding-right: 2%;
+}
+
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+main {
+    box-shadow: 1px 1px 10px rgba(43, 36, 52, 0.649);
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-bg-color);
+}
+header div{
+    height: 2rem;
+}
+
+form input{
+    border-style: none;
+    outline: none;
+    background-color: var(--light-bg-color);
+    padding: 10px 7px 10px 7px;
+    margin: 4px;
+    margin-left: 0px;
+    width: 90%;
+    font-family: var(--bold-font);
+    letter-spacing: .04rem;
+}
+
+.selectedForm{
+    border-left:4px solid var(--accent-color);
+}
+
+.lightTextColor{
+    color: var(--light-accent-color);
+}
+
+.headerSelect{
+    padding: 0px 7px 0px 7px;
+    border-bottom:4px solid var(--accent-color);
+}
+
+.headerSelect p {
+    color: var(--font-color);
+}
+
+.whiteText {
+    color: var(--font-color);
+}
+
+.leftMargin {
+    margin-left: 16%;
+}
+
+.submitButton {
+    padding: 5px 30px 5px 30px;
+    text-align: center;
+    border-radius: 3px;
+    border-style: none;
+    background-color: var(--accent-color);
+    margin: 5px;
+    margin-left: 0px;
+    color: white;
+}
+
+.main-image{
+    width: 100%;
+    height: 100%;
+    background-color: #ff0000;
+    background-image: url(../pictures/red_pug.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mainContainer{
+    margin-top: 25%;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.halfSection{
+    width: 50vw;
+}
+
+.textContainer{
+    width: 220px
+}
+
+.logo{
+    width: 60px
+}
+
+.fullHeight {
+    height: 100vh
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
