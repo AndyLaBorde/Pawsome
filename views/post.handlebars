@@ -1,7 +1,10 @@
 {{#each posts as |post|}}
 <section class="card col-3 m-2 p-3">
     <div class="card-header">
-        <a href="/api/users/{{post.user_id}}"><img src="{{post.user.profile_picture}}" alt="Profile pic"></a>
+        <a href="/api/users/{{post.user_id}}">
+        <div class= "pfp" style="background-image: url({{post.user.profile_picture}})">
+        </div>
+        </a>
         <p>{{post.user.username}}</p>
     </div>
     <div class="card-body">
@@ -14,7 +17,10 @@
         <h5>Comments</h5>
         {{#each post.comments as |comment|}}
             <div class="custom-comment">
-                <p>{{comment.[0].user}}</p>
+                <a href="/users/{{comment.user.user_id}}">
+                <div class="pfp" style="background-image: url({{comment.user.profile_picture}})"></div>
+                </a>
+                <p>{{comment.user.username}}</p>
                 <p>{{comment.text}}</p>
             </div> 
         {{/each}}
