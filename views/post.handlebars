@@ -1,5 +1,4 @@
 <script src="./js/posts-animation.js">
-
 </script>
 <header class="main-header mb-2">
     <a href="">
@@ -15,8 +14,8 @@
 <aside class="hide menu" id="menu">
     <div class="">
         <section>
-            <a href="api/users/{{loggedIn.id}}"><article><p>Profile</p></article></a>
-            <div class= "pfp" id="menuPic" style="background-image: url({{loggedIn.profile_picture}})"></div>
+            <a href="api/users/{{loggedInUser.id}}"><article><p>Profile</p></article></a>
+            <div class= "pfp" id="menuPic" style="background-image: url({{loggedInUser.profile_picture}})"></div>
         </section>
         <section>
             <a href="/search"><article><p>Search</p></article></a>

@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const session = require("express-session");
 const { DataTypes } = require("sequelize");
 const { User, Post, Comment } = require("../../models");
 
