@@ -14,7 +14,7 @@
         <h5>Comments</h5>
         {{#each post.comments as |comment|}}
             <div class="custom-comment">
-                <p>{{comment.[0].user}}</p>
+                <p>{{comment.user.username}}</p>
                 <p>{{comment.text}}</p>
             </div> 
         {{/each}}
