@@ -20,12 +20,13 @@
     color: black
 }
 
-.noScroll {
-    overflow: hidden;
+a {
+    text-decoration: none;
+    color: rgb(255, 0, 0);
 }
 
-.hide {
-    display: none;
+a:hover {
+    color: rgb(255, 0, 0);
 }
 
 p {
@@ -73,6 +74,24 @@ form input{
     letter-spacing: .04rem;
 }
 
+form #image {
+    height: 500px;
+    border: 5px solid var(--accent-color);
+    text-align: center;
+}
+
+
+form #description {
+    padding: 2%;
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
 .selectedForm{
     border-left:4px solid var(--accent-color);
 }
@@ -164,6 +183,7 @@ form input{
 }
 
 .main-header {
+    align-items: center;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -230,9 +250,29 @@ form input{
     width: 150px
 }
 
+.post-header {
+    margin: 2%;
+    border: none;
+}
+
+.post-header div{
+    width: 60px;
+    height: 60px;
+}
+
+.post-main {
+    margin: 5%;
+    box-shadow: none;
+}
+
 #menuPic {
     padding: 0%;
     margin: 0;
+}
+
+#submit-button {
+    position: relative;
+    left: 82%;
 }
 
 

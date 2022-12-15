@@ -1,0 +1,26 @@
+<script data-user="{{loggedInUser.id}}" id="loggedInUser"></script>
+<script src="/js/newpost.js"></script>
+<header class="main-header post-header">
+      <a href="/">
+        <img src="./images/Logo.png" alt="" class="logo m-3" />
+      </a>
+      <a href="api/users/{{loggedInUser.id}}">
+        <div
+          class="pfp"
+          id="menuPic"
+          style="background-image: url({{loggedInUser.profile_picture}})"
+        ></div>
+      </a>
+    </header>
+    <main class="post-main">
+      <!-- form  -->
+      <h1>Post</h1>
+      <div>
+        <form action="">
+          <input type="text" id="image" placeholder="Place Iframe Here!" />
+          <input type="text" id="description" placeholder="description" />
+        </form>
+        <!-- submit  -->
+        <img src="./images/plus_sign.png" alt="submit" id="submit-button" />
+      </div>
+    </main>
