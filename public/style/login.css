@@ -39,8 +39,8 @@ h2 {
 
 
 body {
-    height: 100%;
-    overflow: hidden;
+    height: 100vh;
+    /* overflow: hidden; */
 }
 
 main {
@@ -145,8 +145,30 @@ form input{
     background-size: cover;
     width: 50px;
     height: 50px;
-    display: inline-block;
+    display: block;
     border-radius: 100%
+}
+
+.center-row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom:4px solid var(--accent-color);
+}
+
+.menu-button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.menu-button img{
+    width: 50px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
