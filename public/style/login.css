@@ -156,19 +156,41 @@ form input{
 }
 
 .main-header {
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     border-bottom:4px solid var(--accent-color);
 }
 
-.menu-button {
+.button-reset {
     padding: 0;
     border: none;
     background: none;
 }
 
-.menu-button img{
+.button-reset img{
     width: 50px;
 }
 
+.card-header {
+    display: flex;
+    align-items: center;
+}
+
+.card-header p{
+    padding-left: 12px;
+    padding-top: 12px
+}
+
+.card-body {
+    padding-left: 14px
+}
+
+.card-buttons img{
+    width: 35px;
+    margin: 0 5px 0 5px;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
