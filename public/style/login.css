@@ -203,13 +203,13 @@ form input{
     position: fixed;
     right: 0%;
     z-index: 5;
-    width: 40vw;
+    width: 35vw;
     height: 100vh;
     background-color: white
 }
 
 .menu div{
-    font-size: 25px;
+    font-size: 30px;
     color: var(--accent-color);
     margin-left: 25px;
     display: flex;
@@ -218,7 +218,21 @@ form input{
 
 .menu section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu img {
+    width: 50px
+}
+
+.menu article {
+    width: 150px
+}
+
+#menuPic {
+    padding: 0%;
+    margin: 0;
 }
 
 
