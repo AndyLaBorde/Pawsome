@@ -14,7 +14,7 @@
 <aside class="hide menu" id="menu">
     <div class="">
         <section>
-            <a href="api/users/{{loggedInUser.id}}"><article><p>Profile</p></article></a>
+            <a href="/user/{{loggedInUser.id}}"><article><p>Profile</p></article></a>
             <div class= "pfp" id="menuPic" style="background-image: url({{loggedInUser.profile_picture}})"></div>
         </section>
         <section>
@@ -32,7 +32,7 @@
 {{#each posts as |post|}}
 <section class="card col-5 m-2">
     <div class="card-header">
-        <a href="/api/users/{{post.user_id}}">
+        <a href="/user/{{post.user_id}}">
         <div class= "pfp" style="background-image: url({{post.user.profile_picture}})">
         </div>
         </a>
