@@ -14,3 +14,4 @@ passwordForm.click(() => {
   emailForm.removeClass("selectedForm");
   passwordForm.addClass("selectedForm");
 });
+
