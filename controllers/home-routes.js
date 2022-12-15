@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Comment, Post } = require("../models");
+const { User, Comment, Post, Following, Follower } = require("../models");
 // TODO: Import the custom middleware
 
 // GET all posts for homepage
@@ -69,5 +69,60 @@ router.get("/newpost", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get("/comment/:id", async (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      //get comment by id
+      let post = await Post.findByPk(req.params.id, {
+        include: [
+          { model: User },
+          {
+            model: Comment,
+            include: [{ model: User }],
+          },
+        ],
+      });
+      post = post.get({ plain: true });
+      loggedInUser = req.session.user;
+      res.render("comment", {
+        loggedInUser,
+        post,
+      });
+    } else {
+      res.redirect("/login");
+    }
+    res.status(200);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get("/user/:id", async (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      //get comment by id
+      data = await User.findByPk(req.params.id, {
+        include: [{ model: Post }, { model: Following }, { model: Follower }],
+      });
+      data = data.get({ plain: true });
+      console.log(data.posts[0].photo);
+      loggedInUser = req.session.user;
+      res.render("userpage", {
+        loggedInUser,
+        data,
+      });
+    } else {
+      res.redirect("/login");
+    }
+    res.status(200);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get;
 
 module.exports = router;

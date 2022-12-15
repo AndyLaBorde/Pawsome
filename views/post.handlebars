@@ -14,7 +14,7 @@
 <aside class="hide menu" id="menu">
     <div class="">
         <section>
-            <a href="api/users/{{loggedInUser.id}}"><article><p>Profile</p></article></a>
+            <a href="/user/{{loggedInUser.id}}"><article><p>Profile</p></article></a>
             <div class= "pfp" id="menuPic" style="background-image: url({{loggedInUser.profile_picture}})"></div>
         </section>
         <section>
@@ -32,7 +32,7 @@
 {{#each posts as |post|}}
 <section class="card col-5 m-2">
     <div class="card-header">
-        <a href="/api/users/{{post.user_id}}">
+        <a href="/user/{{post.user_id}}">
         <div class= "pfp" style="background-image: url({{post.user.profile_picture}})">
         </div>
         </a>
@@ -45,16 +45,16 @@
             <button id="likeButton" class="button-reset card-buttons">
             <img  id="bone" src="../images/dog-bone-logo.png" alt="likes logo">
             </button>
-            <button id="commentButton" class="button-reset card-buttons">
+            <a href="/comment/{{post.id}}"><button id="commentButton" class="button-reset card-buttons">
             <img id="comment" src="../images/comment-icon.png" alt="comments logo">
-        </button>
+        </button></a>
         </div>
     </div>
     <div class="card-footer comment-box">
         <h5>Comments</h5>
         {{#each post.comments as |comment|}}
             <div class="custom-comment">
-                <a href="/users/{{comment.user.user_id}}">
+                <a href="/user/{{comment.user.id}}">
                 <div class="pfp" style="background-image: url({{comment.user.profile_picture}})"></div>
                 </a>
                 <p>{{comment.user.username}}</p>

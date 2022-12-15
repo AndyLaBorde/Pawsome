@@ -57,6 +57,17 @@ const newUser = async () => {
   });
   if (response.ok) {
     console.log("signed up!");
+    //logout
+    await fetch("api/users/logout/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+    //login
+    await fetch("api/users/login/", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
+    });
     document.location.replace("/");
   } else {
     console.log("Nope, what were you thinking");
