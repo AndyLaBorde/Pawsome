@@ -20,6 +20,15 @@
     color: black
 }
 
+a {
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+a:hover {
+    color: rgb(255, 0, 0);
+}
+
 .noScroll {
     overflow: hidden;
 }

@@ -15,15 +15,15 @@
 <aside class="hide menu" id="menu">
     <div class="">
         <section>
-            <article><p>Profile</p></article>
+            <a href="api/users/{{loggedIn.id}}"><article><p>Profile</p></article></a>
             <div class= "pfp" id="menuPic" style="background-image: url({{loggedIn.profile_picture}})"></div>
         </section>
         <section>
-            <article><p>Search</p></article>
+            <a href="/search"><article><p>Search</p></article></a>
             <img src="./images/search_icon.png" alt="">
         </section>
         <section>
-            <article><p>Post</p></article>
+            <a href="/newpost"><article><p>Post</p></article></a>
              <img src="./images/plus_sign.png" alt="">
         </section>
     </div>
