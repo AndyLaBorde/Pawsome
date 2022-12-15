@@ -39,11 +39,11 @@ Pawsome is a social media app for pets!
 
 ## Screenshots
 
-![App Screenshot](mockups\wireframe\pawesome_wireframe.png)
+![App Wireframe](mockups/wireframe/pawesome_wireframe.png)
 
-![App Screenshot](mockups\Pawsome_Main_UI_MockUp.png)
+![App Screenshot](mockups/Pawsome_Main_UI_MockUp.png)
 
-![App Screenshot](mockups\Pawsome_Post_Search_MockUp.png)
+![App Screenshot](mockups/Pawsome_Post_Search_MockUp.png)
 
 ## Feedback
 
