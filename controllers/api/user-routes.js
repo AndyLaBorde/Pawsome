@@ -113,6 +113,7 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.user = user;
+      req.session.liked = false;
 
       res
         .status(200)

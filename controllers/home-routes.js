@@ -15,10 +15,12 @@ router.get("/", async (req, res) => {
         ],
       });
       loggedInUser = req.session.user;
+      likedPost = req.session.liked;
       const posts = postData.map((post) => post.get({ plain: true }));
       res.render("post", {
         posts,
         loggedInUser,
+        likedPost,
       });
     } else {
       res.redirect("/login");
