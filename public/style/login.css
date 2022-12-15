@@ -20,6 +20,14 @@
     color: black
 }
 
+.noScroll {
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
 p {
     font-family: var(--bold-font);
 }
@@ -189,6 +197,28 @@ form input{
 .card-buttons img{
     width: 35px;
     margin: 0 5px 0 5px;
+}
+
+.menu {
+    position: fixed;
+    right: 0%;
+    z-index: 5;
+    width: 40vw;
+    height: 100vh;
+    background-color: white
+}
+
+.menu div{
+    font-size: 25px;
+    color: var(--accent-color);
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu section {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 

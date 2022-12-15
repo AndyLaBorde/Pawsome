@@ -14,11 +14,12 @@ router.get("/", async (req, res) => {
           { model: Comment, attributes: ["text"], include: [{ model: User }] },
         ],
       });
-
+      loggedIn = req.session.user;
+      console.log(loggedIn);
       const posts = postData.map((post) => post.get({ plain: true }));
       res.render("post", {
         posts,
-        loggedIn: true,
+        loggedIn,
       });
     } else {
       res.redirect("/login");

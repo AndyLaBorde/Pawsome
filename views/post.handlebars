@@ -1,14 +1,33 @@
+<script src="./js/posts-animation.js">
 
+</script>
 <header class="main-header mb-2">
     <a href="">
         <img src="./images/Logo.png" alt="" class="logo m-3" />
       </a>
 
-      <button class="button-reset">
+      <button id= "menuButton" class="button-reset">
         <img src="./images/menu-rounded-100.png" alt="">
       </button>
 
 </header>
+{{!-- menu  --}}
+<aside class="hide menu" id="menu">
+    <div class="">
+        <section>
+            <p>Search</p>
+            <img src="" alt="">
+        </section>
+        <section>
+            <p>Profile</p>
+            <div class= "pfp" style="background-image: url({{loggedIn.profile_picture}})"></div>
+        </section>
+        <section>
+            <p>Post</p>
+             <img src="" alt="">
+        </section>
+    </div>
+</aside>
 
 <section class="center-row">
 {{#each posts as |post|}}
@@ -20,15 +39,17 @@
         </a>
         <p>{{post.user.username}}</p>
     </div>
-    <div class="card-body">
-        <iframe src="{{post.photo}}" width="100%" height="500px"></iframe>
-        <p>{{post.description}}</p>
-        <button id="likeButton" class="button-reset card-buttons">
-        <img src="../images/dog-bone-logo.png" alt="likes logo">
+    <div class="card-body p-0 pb-2">
+        <iframe src="{{post.photo}}" width="100%" height="500px" allow="autoplay"></iframe>
+        <div class="p-2">
+            <p>{{post.description}}</p>
+            <button class="button-reset card-buttons">
+            <img id="likeButton" src="../images/dog-bone-logo.png" alt="likes logo">
+            </button>
+            <button id="commentButton" class="button-reset card-buttons">
+            <img src="../images/comment-icon.png" alt="comments logo">
         </button>
-        <button id="commentButton" class="button-reset card-buttons">
-        <img src="../images/comment-icon.png" alt="comments logo">
-        </button>
+        </div>
     </div>
     <div class="card-footer comment-box">
         <h5>Comments</h5>
@@ -44,3 +65,5 @@
     </section>
 {{/each}}
 </section>
+
+<script src="./js/menu.js"></script>

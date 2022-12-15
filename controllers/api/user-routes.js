@@ -6,11 +6,7 @@ console.log(Post);
 router.get("/", async (req, res) => {
   try {
     let data = await User.findAll({
-      include: [
-        {model: Post,},
-        {model: Following},
-        {model: Follower}
-      ],
+      include: [{ model: Post }, { model: Following }, { model: Follower }],
     });
     res.status(200).json(data);
   } catch (error) {
@@ -24,13 +20,9 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     data = await User.findByPk(req.params.id, {
-      include: [
-        {model: Post,},
-        {model: Following},
-        {model: Follower}
-      ],
+      include: [{ model: Post }, { model: Following }, { model: Follower }],
     });
-    
+
     res.status(200).json(data);
   } catch (error) {
     res.status(500).json(error);
@@ -58,16 +50,16 @@ router.post("/signup", async (req, res) => {
 module.exports = router;
 
 //update
-router.put('/:id', async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
     const userData = await User.update(req.body, {
       where: {
         id: req.params.id,
       },
-      individualHooks: true
+      individualHooks: true,
     });
     if (!userData[0]) {
-      res.status(404).json({ message: 'No user with this id!' });
+      res.status(404).json({ message: "No user with this id!" });
       return;
     }
     res.status(200).json(userData);
@@ -76,21 +68,18 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-
-
-
 //delete a User
-router.delete('/:id', async (req, res) => {
-  try{
+router.delete("/:id", async (req, res) => {
+  try {
     const userData = await User.destroy({
       where: {
         id: req.params.id,
-      }
+      },
     });
-  if (!userData[0]) {
-      res.status(404).json({ message: 'No user with this id!' });
+    if (!userData[0]) {
+      res.status(404).json({ message: "No user with this id!" });
       return;
-  }
+    }
   } catch (err) {
     res.status(500).json(err);
   }
@@ -99,7 +88,7 @@ router.delete('/:id', async (req, res) => {
 // Login
 router.post("/login", async (req, res) => {
   try {
-    const dbUserData = await User.findOne({
+    let dbUserData = await User.findOne({
       where: {
         email: req.body.email,
       },
@@ -120,9 +109,10 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password. Please try again!" });
       return;
     }
-
+    user = dbUserData.get({ plain: true });
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user = user;
 
       res
         .status(200)
@@ -135,7 +125,7 @@ router.post("/login", async (req, res) => {
 });
 
 // Logout
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
