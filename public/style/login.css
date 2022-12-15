@@ -20,6 +20,14 @@
     color: black
 }
 
+.noScroll {
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
 p {
     font-family: var(--bold-font);
 }
@@ -39,8 +47,8 @@ h2 {
 
 
 body {
-    height: 100%;
-    overflow: hidden;
+    height: 100vh;
+    /* overflow: hidden; */
 }
 
 main {
@@ -140,4 +148,93 @@ form input{
     
 }
 
+.pfp {
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 100%
+}
+
+.center-row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center
+}
+
+.main-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:4px solid var(--accent-color);
+}
+
+.button-reset {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.button-reset img{
+    width: 50px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+}
+
+.card-header p{
+    padding-left: 12px;
+    padding-top: 12px
+}
+
+.card-body {
+    padding-left: 14px
+}
+
+.card-buttons img{
+    width: 35px;
+    margin: 0 5px 0 5px;
+}
+
+.menu {
+    position: fixed;
+    right: 0%;
+    z-index: 5;
+    width: 35vw;
+    height: 100vh;
+    background-color: white
+}
+
+.menu div{
+    font-size: 30px;
+    color: var(--accent-color);
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu img {
+    width: 50px
+}
+
+.menu article {
+    width: 150px
+}
+
+#menuPic {
+    padding: 0%;
+    margin: 0;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+

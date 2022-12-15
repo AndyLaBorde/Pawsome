@@ -15,15 +15,7 @@ router.get("/", async (req, res) => {
         { model: Comment, attributes: ["text"], include: [{ model: User }] },
       ],
     });
-    
-    const posts = postData.map((post) => post.get({ plain: true }));
-    console.log(posts);
-    console.log(posts[0].comments[0].user.username);
-    res.render("post", {
-      posts,
-      loggedIn: req.session.loggedIn,
-    });
-    // res.status(200).json(postData);
+    res.status(200).json(postData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
