@@ -54,7 +54,7 @@
         <h5>Comments</h5>
         {{#each post.comments as |comment|}}
             <div class="custom-comment">
-                <a href="/users/{{comment.user.user_id}}">
+                <a href="/api/users/{{comment.user.id}}">
                 <div class="pfp" style="background-image: url({{comment.user.profile_picture}})"></div>
                 </a>
                 <p>{{comment.user.username}}</p>

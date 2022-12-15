@@ -283,6 +283,41 @@ form #description {
     width: 37px;
 }
 
+.comment-box {
+    height: 150px;
+    overflow: scroll
+}
+.user-page-pfp {
+    margin-right: 5%;
+    width: 225px;
+    height: 225px;
+    border-radius: 100%;
+    background-size: cover;
+}
+
+.profile-heading {
+    padding: 1%;
+    padding-left: 7%;
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.user-posts {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60vh;
+    overflow: scroll;
+}
+.image-posts {
+    margin: 0% .5% .5% .5%;
+    width: 32.3%
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
