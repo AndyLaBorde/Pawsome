@@ -25,6 +25,18 @@ const userData = [
 
     profile_picture: "../images/profile_pictures/Jack_russel_pink.jpg",
   },
+  {
+    //user id = 3
+    username: "Annie Dog",
+
+    email: "Annie@gmail.com",
+
+    password: "henry",
+
+    pet: "Dog",
+
+    profile_picture: "../images/profile_pictures/pfp-1.png",
+  },
 ];
 
 const seedUserData = () => User.bulkCreate(userData);
