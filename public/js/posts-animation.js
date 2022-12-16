@@ -10,8 +10,10 @@ $(document).ready(function () {
         target.attr('src', '../images/dog-bone-logo-red.png')
     });
 
-    commentBubble.click (() => {
-        this.attr('src', '../images/comment-icon-red.png')
+    commentBubble.click ((event) => {
+        var target = $(event.target)
+        console.log('bone clicked');
+        target.attr('src', '../images/comment-icon-red.png')
     });
     anime({
             target: '#comment',
