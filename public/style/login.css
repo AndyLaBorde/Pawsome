@@ -248,6 +248,7 @@ body{
 .card-header {
     display: flex;
     align-items: center;
+    
 }
 
 .card-header p{
