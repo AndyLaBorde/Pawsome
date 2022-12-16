@@ -11,13 +11,13 @@
     <aside class="hide menu" id="menu">
       <div class="">
         <section>
-          <a href="/user/{{data.id}}"
+          <a href="/user/{{loggedInUser.id}}"
             ><article><p>Profile</p></article></a
           >
           <div
             class="pfp"
             id="menuPic"
-            style="background-image: url({{data.profile_picture}})"
+            style="background-image: url({{loggedInUser.profile_picture}})"
           ></div>
         </section>
         <section>
