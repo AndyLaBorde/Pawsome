@@ -15,6 +15,7 @@ passwordForm.click(() => {
   passwordForm.addClass("selectedForm");
 });
 
+
 anime({
   targets: '#paw1',
   translateX: 450,
