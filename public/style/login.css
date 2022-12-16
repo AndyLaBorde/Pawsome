@@ -1,14 +1,34 @@
 :root {
-    /* darkmode */
     --main-bg-color: #ffffff;
     --light-bg-color: #e5e5e5;
     --light-accent-color: #8e94c0;
     --accent-color: #ff0000;
     --font-color: rgb(0, 0, 0);
     --bold-font: 'Roboto', sans-serif;
+} 
 
-    
+:root[data-theme = "dark"]{
+    --main-bg-color: #323030;
+    --light-bg-color: #4b4b4b;
+    --light-accent-color: #8e94c0;
+    --accent-color: #ff0000;
+    --font-color: rgb(255, 255, 255);
+    --bold-font: 'Roboto', sans-serif; 
 }
+
+
+:root[data-theme = "light"]{
+    --main-bg-color: #ffffff;
+    --light-bg-color: #e5e5e5;
+    --light-accent-color: #8e94c0;
+    --accent-color: #ff0000;
+    --font-color: rgb(0, 0, 0);
+    --bold-font: 'Roboto', sans-serif;
+}
+
+
+
+
 /* dark mode */
 /* --main-bg-color: #2d3250;
     --light-bg-color: #484d6c;
@@ -17,7 +37,7 @@
     --font-color: white; */
 
 ::placeholder{
-    color: black
+    color: var(--font-color)
 }
 
 a {
@@ -31,6 +51,7 @@ a:hover {
 
 p {
     font-family: var(--bold-font);
+    color: var(--font-color);
 }
 
 h1 {
@@ -46,10 +67,15 @@ h2 {
     padding-right: 2%;
 }
 
+h3{
+    color: var(--font-color);
+}
+h5{
+    color: var(--font-color);
+}
 
 body {
-    height: 100vh;
-    /* overflow: hidden; */
+    height: 100vh;    
 }
 
 main {
@@ -83,6 +109,14 @@ form #image {
 
 form #description {
     padding: 2%;
+}
+
+body{
+    background-color: var(--main-bg-color);
+}
+
+.background-light {
+    background-color: var(--light-bg-color);
 }
 
 .line {
@@ -235,7 +269,7 @@ form #description {
     z-index: 5;
     width: 35vw;
     height: 100vh;
-    background-color: white
+    background-color: var(--main-bg-color);
 }
 
 .menu div{
@@ -250,6 +284,7 @@ form #description {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .menu img {
@@ -320,6 +355,16 @@ form #description {
     width: 32.3%
 }
 
+.switch {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1%;
+}
+
+#icon-link {
+    width: 10%;
+}
 
 #menuPic {
     padding: 0%;
