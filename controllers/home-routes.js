@@ -107,9 +107,30 @@ router.get("/user/:id", async (req, res) => {
         include: [{ model: Post }, { model: Following }, { model: Follower }],
       });
       data = data.get({ plain: true });
-      console.log(data.posts[0].photo);
       loggedInUser = req.session.user;
       res.render("userpage", {
+        loggedInUser,
+        data,
+      });
+    } else {
+      res.redirect("/login");
+    }
+    res.status(200);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get("/search", async (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      //get comment by id
+      loggedInUser = req.session.user;
+      let data = await User.findAll();
+      data = data.map((data) => data.get({ plain: true }));
+      console.log(data);
+      res.render("search", {
         loggedInUser,
         data,
       });

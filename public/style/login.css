@@ -85,6 +85,11 @@ form #description {
     padding: 2%;
 }
 
+.line {
+    width: 80vw;
+    border-bottom: 2px solid var(--light-bg-color);
+}
+
 .noScroll {
     overflow: hidden;
 }
@@ -341,6 +346,11 @@ form #description {
 .margin4{
     margin-top: 3vh;
     margin-left: 2vw;
+}
+
+.search-text {
+    font-size: 35px;
+    color:black;
 }
 
 
