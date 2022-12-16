@@ -25,6 +25,10 @@
             <a href="/newpost"><article><p>Post</p></article></a>
              <img src="./images/plus_sign.png" alt="">
         </section>
+         <section>
+            <a href="/logout"><article><p>logout</p></article></a>
+             <img src="./images/logout.png" alt="">
+        </section>
     </div>
 </aside>
 
@@ -43,7 +47,7 @@
         <div class="p-2">
             <p>{{post.description}}</p>
             <img class="bone card-buttons" src="../images/dog-bone-logo.png" alt="likes logo">
-            <a href="/comment/{{post.id}}"><button id="commentButton" class="button-reset card-buttons">
+            <a href="/comment/{{post.id}}"><button class="button-reset card-buttons commentButton">
             <img id="commentButton" src="../images/comment-icon.png" alt="comments logo">
         </button></a>
         </div>
