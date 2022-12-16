@@ -14,6 +14,7 @@
     --accent-color: #ff0000;
     --font-color: rgb(255, 255, 255);
     --bold-font: 'Roboto', sans-serif; 
+    --card-background: #4b4b4b;
 }
 
 
@@ -24,6 +25,7 @@
     --accent-color: #ff0000;
     --font-color: rgb(0, 0, 0);
     --bold-font: 'Roboto', sans-serif;
+    --card-background: rgb(255, 255, 255);
 }
 
 
@@ -117,6 +119,10 @@ body{
 
 .background-light {
     background-color: var(--light-bg-color);
+}
+
+.card-background {
+    background-color: var(--card-background);
 }
 
 .line {
