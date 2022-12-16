@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme = "light">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,6 +30,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
         ></script>
+        <script src="../js/light_dark.js"></script>
     </head>
     <body>
         {{{body}}}
@@ -42,7 +43,8 @@
         crossorigin="anonymous"
         ></script>
         <a href="https://icons8.com/">
-          <p class="lightTextColor fixed-bottom m-1">Icons by Icons8</p>
+          <p id="icon-link" class="lightTextColor fixed-bottom m-1">Icons by Icons8</p>
         </a>
+        <img class="switch" id="switch" src="/images/day_night.png" alt="">
     </body>
 </html>
