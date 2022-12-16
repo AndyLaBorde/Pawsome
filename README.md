@@ -37,6 +37,10 @@ Pawsome is a social media app for pets!
 - Search, and Follow Friends
 - Like and comment on posts
 
+## Deployed Page
+
+https://pawsome.herokuapp.com/
+
 ## Screenshots
 
 ![App Wireframe](mockups/wireframe/pawesome_wireframe.png)
