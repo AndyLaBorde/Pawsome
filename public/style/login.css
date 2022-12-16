@@ -326,10 +326,22 @@ form #description {
     left: 82%;
 }
 
-.margin1{margin-left: -16vw;}
-.margin2{margin-left: 2vw;}
-.margin3{margin-left: -14vw;}
-.margin4{margin-left: 2vw;}
+.margin1{
+    margin-top: 10vh;
+    margin-left: -16vw;
+}
+.margin2{
+    margin-top: 10vh;
+    margin-left: 2vw;
+}
+.margin3{
+    margin-top: 3vh;
+    margin-left: -14vw;
+}
+.margin4{
+    margin-top: 3vh;
+    margin-left: 2vw;
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
