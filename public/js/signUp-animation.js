@@ -32,10 +32,10 @@ const randomPfp = () => {
     "../images/profile_pictures/Jack_russel_pink.jpg",
     "../images/profile_pictures/pug_yellow.jpg",
     "../images/profile_pictures/Samoyed_pink.jpg",
-    "../images/profile_pictures/pfp-1.jpg",
-    "../images/profile_pictures/pfp-2.jpg",
-    "../images/profile_pictures/pfp-3.jpg",
-    "../images/profile_pictures/pfp-4.jpg",
+    "../images/profile_pictures/pfp-1.png",
+    "../images/profile_pictures/pfp-2.png",
+    "../images/profile_pictures/pfp-3.png",
+    "../images/profile_pictures/pfp-4.png",
   ];
   const index = Math.floor(Math.random() * profile_pics.length);
   console.log(index);
